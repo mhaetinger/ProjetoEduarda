@@ -1,0 +1,27 @@
+.historia-container {
+  margin: 40px;
+  background-color: #0000008c;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgb(255, 255, 255);
+}
+
+.titulo-historia {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d82d2d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.texto-historia {
+  font-size: 1.1rem;
+  color: #ddd4d4;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.texto-historia:last-child {
+  margin-bottom: 0;
+}
