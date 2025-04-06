@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aniversario-namoro/static/css/main.139f5224.css",
+    "main.js": "/aniversario-namoro/static/js/main.80a64802.js",
+    "static/js/453.1607c1c1.chunk.js": "/aniversario-namoro/static/js/453.1607c1c1.chunk.js",
+    "index.html": "/aniversario-namoro/index.html",
+    "main.139f5224.css.map": "/aniversario-namoro/static/css/main.139f5224.css.map",
+    "main.80a64802.js.map": "/aniversario-namoro/static/js/main.80a64802.js.map",
+    "453.1607c1c1.chunk.js.map": "/aniversario-namoro/static/js/453.1607c1c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.139f5224.css",
+    "static/js/main.80a64802.js"
+  ]
+}
