@@ -4,15 +4,19 @@
   color: white;
   font-family: 'Arial', sans-serif;
   position: relative;
+  max-width: 1200px; /* Limite máximo para o tamanho da página */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  padding: 20px;
 }
 
 .App-header {
-  padding: 50px;
+  padding: 20px;
 }
 
 .titulo {
   font-size: 3rem;
-  margin: 0;
+  margin: 0 auto;
+  padding: 20px;
   color: red;
 }
 
@@ -23,63 +27,59 @@
 
 .carrossel {
   margin: 20px 0;
+  max-width: 100%; /* O carrossel deve ocupar 100% da largura disponível */
+  overflow: hidden; /* Garante que nada saia da área definida */
 }
 
+/* Imagem do carrossel */
 .carrossel-imagem {
-  max-width: 500px; /* Aumentando o tamanho máximo para 400px */
-  margin: 0 auto;
-  border-radius: 10px; /* Bordas arredondadas */
+  width: 100%; /* Agora, a imagem se adapta à largura do container */
+  height: 500px; /* Altura fixa */
+  object-fit: cover; /* Faz com que a imagem preencha a área sem distorcer */
+  border-radius: 10px; /* Bordas arredondadas nas imagens */
   transition: transform 0.5s ease; /* Transição suave */
   opacity: 0.7; /* Um pouco de transparência */
-}
-
-.carrossel-imagem {
-  width: 1200px; /* Largura fixa */
-  height: 500px; /* Altura fixa */
-  object-fit: cover; /* Imagem cobrirá o espaço sem distorção */
 }
 
 /* Para as imagens da esquerda e direita */
 .carousel-item-next .carrossel-imagem,
 .carousel-item-prev .carrossel-imagem {
-  opacity: 0.5; /* Menos visibilidade para imagens não ativas */
-  transform: scale(0.8); /* Aumentando um pouco a escala para 0.8 */
+  opacity: 0.5;
+  transform: scale(0.8); /* Diminuir um pouco as imagens que não estão ativas */
 }
 
 .carousel-item.active .carrossel-imagem {
-  opacity: 1; /* Imagem ativa com 100% de visibilidade */
-  transform: scale(1); /* A imagem do meio vai ter tamanho normal */
+  opacity: 1;
+  transform: scale(1); /* A imagem ativa vai ocupar o espaço total */
 }
 
-.historia {
-  margin: 20px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+/* Estilo para a história */
+.historia-container {
+  margin: 40px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-
-
-.dias-totais {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.dias-texto {
-  font-size: 0.8rem; /* Fonte menor para o contador de dias totais */
-  color: red;
-}
-
-
-
-
-
-
-
+/* Estilo para o botão de amor */
 .botao-amor {
   margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
+.botao-amor:hover {
+  background-color: darkred;
+  transform: scale(1.1);
+}
+
+/* Ajuste da animação dos corações */
 @keyframes heartAnimation {
   0% { transform: scale(1); }
   50% { transform: scale(1.2); }
@@ -88,4 +88,15 @@
 
 .heart {
   animation: heartAnimation 1.5s infinite;
+}
+
+/* Ajuste para os dias totais */
+.dias-totais {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dias-texto {
+  font-size: 0.8rem; /* Fonte menor para o contador de dias totais */
+  color: red;
 }

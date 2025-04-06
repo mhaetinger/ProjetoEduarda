@@ -55,13 +55,13 @@ function App() {
           <span role="img" aria-label="heart">❤️</span> Mateus e Maria Eduarda{' '}
           <span role="img" aria-label="heart">❤️</span>
         </h1>
-        <p className="subtitulo">Nosso Amor: Uma Historia à distancia</p>
+        <p className="subtitulo">Nosso Amor daqui ao resto da vida</p>
       </header>
 
       <div className="carrossel">
   <Carousel interval={3000}>
     <Carousel.Item>
-      <img className="d-block w-75 carrossel-imagem" src="/imagens/imagem1.jpg" alt="Imagem 1" />
+      <img className="d-block w-75 carrossel-imagem" src="/imagens/imagem1teste.jpg" alt="Imagem 1" />
     </Carousel.Item>
     <Carousel.Item>
       <img className="d-block w-75 carrossel-imagem" src="/imagens/imagem2.jpg" alt="Imagem 2" />
