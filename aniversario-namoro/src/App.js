@@ -48,6 +48,10 @@ function App() {
     return () => clearInterval(intervalo);
   }, [dataInicio]);
 
+
+  const imagens = Array.from({ length: 35 }, (_, i) => `/imagens/imagem${i + 1}.jpg`);
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -55,22 +59,21 @@ function App() {
           <span role="img" aria-label="heart">❤️</span> Mateus e Maria Eduarda{' '}
           <span role="img" aria-label="heart">❤️</span>
         </h1>
-        <p className="subtitulo">Nosso Amor: Uma Historia à distancia</p>
+        <p className="subtitulo">Nosso Amor daqui ao resto da vida</p>
       </header>
-
-      <div className="carrossel">
-        <Carousel interval={3000}>
-          <Carousel.Item>
-            <img className="d-block w-75 carrossel-imagem" src="/imagens/imagem1.jpg" alt="Imagem 1" />
+    <div className="carrossel">
+      <Carousel interval={3000}>
+        {imagens.map((src, index) => (
+          <Carousel.Item key={index}>
+            <img
+              className="d-block w-75 carrossel-imagem"
+              src={src}
+              alt={`Imagem ${index + 1}`}
+            />
           </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-75 carrossel-imagem" src="/imagens/imagem2.jpg" alt="Imagem 2" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-75 carrossel-imagem" src="/imagens/imagem3.jpg" alt="Imagem 3" />
-          </Carousel.Item>
-        </Carousel>
-      </div>
+        ))}
+      </Carousel>
+    </div>
 
       <Historia />
 
